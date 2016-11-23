@@ -1,22 +1,22 @@
-package com.mygdx.game.sprite;
+package com.mygdx.game.sprites;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
-import com.mygdx.game.MyGdxGame;
+import com.mygdx.game.PlatformerGame;
 
 /**
  * Created by Никита on 18.11.2016.
  */
-public class SkyPlatform {
+public class Ground {
     private Texture image;
     private Vector2 position;
     private Rectangle bounds;
 
-    public SkyPlatform(Vector2 position) {
-        this.image = new Texture("sky-platform.png");
-        this.position = position;
-        this.bounds = new Rectangle(this.position.x, this.position.y, MyGdxGame.WIDTH, this.image.getHeight());
+    public Ground() {
+        image = new Texture("platform.png");
+        position = new Vector2(0,0);
+        bounds = new Rectangle(position.x, position.y, PlatformerGame.WIDTH, image.getHeight());
     }
 
     public Texture getImage() {
